@@ -40,8 +40,9 @@ public class SecurityConfig {
     CorsConfiguration config = new CorsConfiguration();
 
     // adjust allowed origins to your frontend hosts in production
-    config.setAllowedOrigins(List.of("http://localhost:3000", "http://localhost:8080"));
+    config.setAllowedOrigins(List.of("http://localhost:3000", "http://localhost:5173"));
     config.setAllowedMethods(List.of("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
+    config.setAllowCredentials(true);
     config.setAllowedHeaders(List.of("*"));
     config.setExposedHeaders(List.of("Authorization", "Content-Type"));
     config.setAllowCredentials(true);
